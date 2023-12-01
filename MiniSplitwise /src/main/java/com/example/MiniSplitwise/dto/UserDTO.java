@@ -8,7 +8,7 @@ import java.util.*;
 public class UserDTO {
     private String name;
     private String accPassword;
-    private String userID;
+    private UUID userId;
     private String personalEmail;
     private String contact;
     public User getUserFromDto(){
@@ -16,10 +16,29 @@ public class UserDTO {
 
         user.setName(name);
         user.setAccPassword(accPassword);
-        user.setRollNo(userId);
+        user.setUserId(userId);
         user.setPersonalEmail(personalEmail);
         user.setContact(contact);
 
         return user;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public String getAccPassword() {
+        return accPassword;
+    }
+
+    public UUID getUserId() {
+        return userId;
+    }
+
+    public String getPersonalEmail() {
+        return personalEmail;
+    }
+
+    public String getContact() {
+        return contact;
     }
 }

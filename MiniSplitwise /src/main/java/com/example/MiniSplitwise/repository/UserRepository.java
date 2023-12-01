@@ -4,14 +4,10 @@ import com.example.MiniSplitwise.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.List;
+import java.util.*;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, UUID> {
     // You can add custom query methods if needed
-    @Query("SELECT u FROM USER u WHERE u.email = ?1")
-    User findByEmail(String email);
 
-    @Query("SELECT * FROM USER u")
-    List<User> findAll();
 }
 
