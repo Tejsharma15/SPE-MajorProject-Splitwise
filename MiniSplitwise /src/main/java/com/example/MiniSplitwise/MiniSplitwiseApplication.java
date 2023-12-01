@@ -8,6 +8,7 @@ public class MiniSplitwiseApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MiniSplitwiseApplication.class, args);
+		System.out.println("Running Splitwise");
 	}
 
 }
