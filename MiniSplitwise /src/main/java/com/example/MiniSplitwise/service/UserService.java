@@ -1,4 +1,5 @@
 package com.example.MiniSplitwise.service;
+
 import com.example.MiniSplitwise.dto.UserDTO;
 import com.example.MiniSplitwise.model.User;
 import com.example.MiniSplitwise.repository.UserRepository;
