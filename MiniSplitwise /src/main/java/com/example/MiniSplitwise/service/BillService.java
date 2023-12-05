@@ -37,4 +37,17 @@ public class BillService {
         }
         return addedMappings;
     }
+
+    public Optional<Bill> getBillById(UUID id){
+        return billRepository.findById(id);
+    }
+
+    @Transactional
+    public void updateStatusToTrue(UUID entityId) {
+        Optional<Bill> billEntity = billRepository.findById(entityId);
+        billEntity.ifPresent(entity -> {
+            entity.setCompleted(true);
+            billRepository.save(entity);
+        });
+    }
 }

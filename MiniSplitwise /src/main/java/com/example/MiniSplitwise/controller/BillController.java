@@ -43,4 +43,21 @@ public class BillController {
 
         return ResponseEntity.ok(insertedData);
     }
+
+    @GetMapping("/getBillById/{id}")
+    public ResponseEntity<Bill> getBillById(@PathVariable UUID id){
+        System.out.println(id);
+        Optional<Bill> optionalBill = billService.getBillById(id);
+        if(optionalBill.isPresent()){
+            Bill bill = optionalBill.get();
+            return ResponseEntity.ok(bill);
+        }
+        else return ResponseEntity.notFound().build();
+    }
+
+    @PutMapping("/updateStatus/{id}")
+    public void updateStatusById(@PathVariable UUID id){
+        System.out.println("Updating Status");
+        billService.updateStatusToTrue(id);
+    }
 }
