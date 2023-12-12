@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MiniSplitwise /MiniSplitwise.iml" filepath="$PROJECT_DIR$/MiniSplitwise /MiniSplitwise.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SPE-MajorProject-Splitwise.iml" filepath="$PROJECT_DIR$/.idea/SPE-MajorProject-Splitwise.iml" />
     </modules>
   </component>
