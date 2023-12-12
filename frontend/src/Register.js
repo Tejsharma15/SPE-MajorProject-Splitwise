@@ -20,6 +20,7 @@ function Register() {
   };
 
   const sendUserData = async (userData) => {
+    console.log(JSON.stringify(userData))
     try {
       const response = await fetch('http://localhost:8081/users', {
         method: 'POST',
