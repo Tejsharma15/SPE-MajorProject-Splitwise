@@ -18,24 +18,14 @@ pipeline
                 url:'https://github.com/Tejsharma15/SPE-MajorProject-Splitwise'
             }
         }
-        stage('Stage 2: Build Backend') {
-            steps {
-                sh 'cd MiniSplitwise && mvn clean install'
-            }
-        }
-        stage('Stage 3: Build Frontend') {
+        stage('Stage 2: Compile Frontend') {
             steps {
                 sh 'cd frontend && npm install && npm run build'
             }
         }
-        stage('Stage 4: Build and Push Backend Docker Image') {
+        stage('Stage 3: Compile Backend') {
             steps {
-                script {
-                    backendImage = docker.build(env.BACKEND_IMAGE_NAME, './MiniSplitwise')
-                    docker.withRegistry('', registryCredential) {
-                        backendImage.push('latest')
-                    }
-                }
+                sh 'cd MiniSplitwise && mvn clean install'
             }
         }
         stage('Stage 5: Build and Push Frontend Docker Image') {
@@ -44,6 +34,16 @@ pipeline
                     frontendImage = docker.build(env.FRONTEND_IMAGE_NAME, './frontend')
                     docker.withRegistry('', registryCredential) {
                         frontendImage.push('latest')
+                    }
+                }
+            }
+        }
+        stage('Stage 4: Build and Push Backend Docker Image') {
+            steps {
+                script {
+                    backendImage = docker.build(env.BACKEND_IMAGE_NAME, './MiniSplitwise')
+                    docker.withRegistry('', registryCredential) {
+                        backendImage.push('latest')
                     }
                 }
             }
