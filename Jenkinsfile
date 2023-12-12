@@ -49,6 +49,7 @@ pipeline
         }
         stage('Stage 3: Compile Backend') {
             steps {
+								sh 'pwd'
                 sh 'cd MiniSplitwise && mvn clean install'
             }
         }
