@@ -41,15 +41,19 @@ pipeline
         }
         stage('Stage 2: Compile Frontend') {
             steps {
-                sh 'cd frontend && npm install && npm run build'
+							dir('frontend'){
+                sh 'npm install && npm run build'
+							}
             }
         }
         stage('Stage 3: Compile Backend') {
             steps {
-                sh 'cd MiniSplitwise && mvn clean install'
+							dir('MiniSplitwise'){
+                sh 'mvn clean install'
+							}
             }
         }
-        stage('Stage 5: Build and Push Frontend Docker Image') {
+        stage('Stage 4: Build and Push Frontend Docker Image') {
             steps {
                 script {
                     frontendImage = docker.build(env.FRONTEND_IMAGE_NAME, './frontend')
@@ -59,7 +63,7 @@ pipeline
                 }
             }
         }
-        stage('Stage 4: Build and Push Backend Docker Image') {
+        stage('Stage 5: Build and Push Backend Docker Image') {
             steps {
                 script {
                     backendImage = docker.build(env.BACKEND_IMAGE_NAME, './MiniSplitwise')
