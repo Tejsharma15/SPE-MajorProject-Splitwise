@@ -18,7 +18,7 @@ import java.util.*;
 @Entity
 public class Bill {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="billid")
     private UUID billId;
 
