@@ -24,7 +24,7 @@ services:
   
   
   backend:
-    image: "chinx23/backend:latest"
+    image: chinx23/backend:latest
     ports:
       - "8081:8081"
     depends_on:

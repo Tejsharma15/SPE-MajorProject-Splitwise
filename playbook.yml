@@ -1,12 +1,34 @@
 ---
 - name: Pull and run docker image
-  hosts: host_machine
+  hosts: tejas
+  # become: yes
   tasks:
+    - name: Check if Docker is installed
+      command: docker --version
+      register: docker_version
+      ignore_errors: true
 
-    # - name: Put docker compose file on machine
-    #   copy:
-    #     src: ./docker-compose.yaml
-    #     dest: ./
+    - name: Install Docker if not present
+      apt:
+        name: docker.io
+        state: present
+      when: docker_version.rc != 0
+
+    - name: Check if Docker Compose is installed
+      command: docker-compose --version
+      register: compose_version
+      ignore_errors: true
+
+    - name: Install Docker Compose if not present
+      apt:
+        name: docker-compose
+        state: present
+      when: compose_version.rc != 0
+
+    - name: Put docker compose file on machine
+      copy:
+        src: ./docker-compose.yaml
+        dest: ~/
 
     - name: Pull images
       shell: 
