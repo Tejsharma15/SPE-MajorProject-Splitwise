@@ -1,0 +1,20 @@
+---
+- name: Pull and run docker image
+  hosts: host_machine
+  tasks:
+
+    # - name: Put docker compose file on machine
+    #   copy:
+    #     src: ./docker-compose.yaml
+    #     dest: ./
+
+    - name: Pull images
+      shell: 
+        cmd: docker-compose pull
+        chdir: ./
+
+    - name: Run the pulled Docker images in detached mode
+      command: docker-compose up -d --build
+
+    - name: Prune unwanted images
+      command: docker image prune --force
