@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 import java.io.*;
@@ -15,6 +17,7 @@ import java.io.*;
 @RestController
 @RequestMapping("/bills")
 public class BillController {
+    private static final Logger logger = LogManager.getLogger(BillController.class);
     private final BillService billService;
     BillController(BillService billService){
         this.billService = billService;
@@ -22,6 +25,7 @@ public class BillController {
 
     @PostMapping("/addBills")
     public ResponseEntity<Map<UUID, String>> addBills (@RequestBody BillDTO billDTO) {
+        logger.info("Adding bill");
         // Assuming yourService.addDebitors returns a Map<UUID, String>
         System.out.println(billDTO.getAmount());
         Map<UUID, String> insertedData = new HashMap<>();
@@ -46,6 +50,7 @@ public class BillController {
 
     @GetMapping("/getBillById/{id}")
     public ResponseEntity<Bill> getBillById(@PathVariable UUID id){
+        logger.info("Finding bill by Id");
         System.out.println(id);
         Optional<Bill> optionalBill = billService.getBillById(id);
         if(optionalBill.isPresent()){
@@ -57,7 +62,7 @@ public class BillController {
 
     @PutMapping("/updateStatus/{id}")
     public void updateStatusById(@PathVariable UUID id){
-        System.out.println("Updating Status");
+        logger.info("Updating bill by id");
         billService.updateStatusToTrue(id);
     }
 }
