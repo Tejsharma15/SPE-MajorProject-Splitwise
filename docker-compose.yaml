@@ -30,6 +30,8 @@ services:
     depends_on:
       - myappdb
     container_name: backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://myappdb:5432/minisplitwise?createDatabaseIfNotExist=true
     # volumes:
     #   - /logs:/logs
     networks:
