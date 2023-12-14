@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createSlice,configureStore } from "@reduxjs/toolkit";
+import jwt_decode from 'jwt-decode';
 const loginSlice = createSlice({
   name: "login",
   initialState: {
@@ -9,6 +9,7 @@ const loginSlice = createSlice({
   reducers: {
     login: (state, action) => {
       console.log("IN DISPATCH LOGIN with action:", action);
+			console.log(action.payload)
 			state.user= action.payload.user;
       state.token = action.payload.token;
     },
@@ -30,6 +31,18 @@ const loginSlice = createSlice({
       }
     },
   },
+});
+const persistedState = localStorage.getItem("reduxState")
+  ? JSON.parse(localStorage.getItem("reduxState"))
+  : {};
+
+console.log("IN STORE PERSISTED STATE:", persistedState);
+
+// export const actions = loginSlice.actions;
+
+export const store = configureStore({
+  reducer: loginSlice.reducer,
+  preloadedState: persistedState,
 });
 
 export const { login, logout, checkValidity } = loginSlice.actions;

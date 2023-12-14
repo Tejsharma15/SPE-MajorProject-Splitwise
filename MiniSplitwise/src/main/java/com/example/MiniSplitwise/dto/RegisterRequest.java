@@ -15,18 +15,18 @@ import java.util.Set;
 @NoArgsConstructor
 public class RegisterRequest {
     private String name;
-    private String personalEmail;
-    private String accPassword;
+    private String email;
+    private String password;
     private String contact;
 
     public String getName(){
         return name;
     }
     public String getPersonalEmail(){
-        return personalEmail;
+        return email;
     }
     public String getAccPassword(){
-        return accPassword;
+        return password;
     }
     public String getContact(){
         return contact;

@@ -35,11 +35,13 @@ public class AuthenticationService {
         // byte[] decodedBytes = Base64.getDecoder().decode(request.getAccPassword());
         // String decodedPassword = new String(decodedBytes);
         // System.out.println(decodedPassword);
+        System.out.println(request.getContact());
         var user = User.builder()
         .name(request.getName())
         .contact(request.getContact())
         .personalEmail(request.getPersonalEmail())
         .accPassword(passwordEncoder.encode(request.getAccPassword())).contact(request.getContact()).build();
+        System.out.println(user);
         // for(Role r:user.getRoles()) {
         //     System.out.println(r.getRoleName());
         // }
@@ -50,10 +52,8 @@ public class AuthenticationService {
     }
 
     public AuthenticationResponse authenticate(AuthenticationRequest request) throws Exception {
-        byte[] decodedBytes = Base64.getDecoder().decode(request.getAccPassword());
-        String decodedPassword = new String(decodedBytes);
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getPersonalEmail(), request.getAccPassword()));
-        User user = userService.findUserByEmail(request.getPersonalEmail());
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+        User user = userService.findUserByEmail(request.getEmail());
         HashMap<String, Object> claims = new HashMap<String, Object>();
         var jwtToken = jwtService.generateToken(claims, user);
         return AuthenticationResponse.builder().token(jwtToken).build();

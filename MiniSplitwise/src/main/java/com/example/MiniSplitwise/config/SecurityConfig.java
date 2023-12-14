@@ -47,7 +47,7 @@ public class SecurityConfig {
         //                         .anyRequest().permitAll()
         //         )
         //         .httpBasic(withDefaults());
-        http.cors().and().csrf().disable().authorizeHttpRequests().requestMatchers("/auth/register").permitAll().anyRequest().authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authenticationProvider(authenticationProvider).addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+        http.cors().and().csrf().disable().authorizeHttpRequests().requestMatchers("/auth/*").permitAll().anyRequest().authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authenticationProvider(authenticationProvider).addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

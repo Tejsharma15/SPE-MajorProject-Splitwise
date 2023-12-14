@@ -37,8 +37,9 @@ function Header() {
     <Link to="/"><Image boxSize='50px' objectFit='cover' borderRadius='full' color='gray' src={logo}></Image></Link>
       <Heading as="h1" p='2' fontSize="4xl">MiniSplitwise</Heading>
       <Spacer/>
+      <Button as={Link} to="/register" m='2' >Sign-Up</Button>
       <Button as={Link} to="/login" m='2' >Login</Button>
-      
+
     </Box>
     </>
   );

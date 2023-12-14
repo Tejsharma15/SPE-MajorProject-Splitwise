@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Box, Input, InputGroup, InputRightElement, Button, FormErrorMessage, Heading, Spacer } from '@chakra-ui/react';
+import { Box, Input, InputGroup, Button, Heading } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
+import { login } from '../store';
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -9,27 +10,44 @@ function Login() {
     const dispatch = useDispatch();
     const handleSubmit = (e) => {
       e.preventDefault();
-      loginAPICall(e.email,e.password);
+      const userData = {
+        email,
+        password
+      };
+      loginAPICall(userData);
       // navigate("/")
       console.log('Login submitted:', e);
     };
     const loginAPICall = async (userData) => {
-      console.log(JSON.stringify(userData))
-      const response = await fetch('http://localhost:8081/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-      });
+      console.log(userData)
+      let jwt,ret;
+      const response = await fetch('http://localhost:8081/auth/authenticate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    }).then((data) => {
+      // data = data.json();
+      // console.log("Login data returned :", data);
+      ret = data.ok;
+      return data.json();
+    })
+    .then((data) => {
+      console.log(data);
+      jwt = data["token"];
+    })
+    .catch((err) => {
+      ret = false;
+      console.log(err.message);
+    });
 
-      console.log(response);
-      if (!response.ok) {
-        alert("Couldn't Log In. Try to Register first.")
+      if(ret && jwt){
+        dispatch(login({"user": email,"token":jwt}));
+        setEmail('');
+        setPassword('');
+        navigate("/");
 
-      }
-      else{
-        dispatch(email,response)
         console.log('User logged in');
       }
 
@@ -57,9 +75,7 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             />
-        </InputGroup>
-        { /* Add conditional rendering for password length error message */ }
-        <FormErrorMessage>Password must be at least 8 characters long.</FormErrorMessage>
+        </InputGroup> 
         <Button type="submit" colorScheme="teal" color="black">Login</Button>
         </Box>
         </Box>
