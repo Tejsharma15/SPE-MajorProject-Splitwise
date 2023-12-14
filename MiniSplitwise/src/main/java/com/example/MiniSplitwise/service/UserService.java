@@ -9,12 +9,21 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import  java.util.*;
 
 @Service
-public class UserService{
+public class UserService implements UserDetailsService{
     private final UserRepository userRepository;
+    private static final Logger logger = LogManager.getLogger(UserService.class);
+
+    @Autowired
+    private BCryptPasswordEncoder bcryptEncoder;
 
     @Autowired
     public UserService(UserRepository userRepository) {
@@ -39,5 +48,23 @@ public class UserService{
     }
     public Optional<User> getUserById(UUID userId){
         return userRepository.findById(userId);
+    }
+    public UserDetails loadUserByUsername(String email) {
+        User user = findUserByEmail(email);
+        return new org.springframework.security.core.userdetails.User(user.getPersonalEmail(), user.getAccPassword(), user.getAuthorities());
+    }
+    public User findUserByEmail(String email) throws UsernameNotFoundException{
+        // FIND USER
+        Optional<User> user = userRepository.findByPersonalEmail(email);
+//        SEND USER ID TO ROLE ROPE
+        if(user.isPresent()){
+            User u = user.get();
+            return u;
+        }
+        else{
+            logger.error("User not found");
+            throw new UsernameNotFoundException("User is not found");
+        } 
+//        return null;
     }
 }

@@ -9,5 +9,7 @@ import java.util.*;
 public interface UserRepository extends JpaRepository<User, UUID> {
     // You can add custom query methods if needed
 
+    @Query("SELECT u from User u WHERE u.personalEmail = ?1")
+    Optional<User> findByPersonalEmail(String personalEmail);
 }
 
