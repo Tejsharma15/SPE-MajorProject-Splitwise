@@ -7,6 +7,14 @@
         </encoder>
     </appender>
 
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <File>./logs/backend.log</File>
+        <encoder>
+            <!-- Change timestamp format to ISO 8601 -->
+            <pattern>[%d{ISO8601}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+        </encoder>
+    </appender>
+
     <root level="INFO">
         <appender-ref ref="FILE" />
         <appender-ref ref="STDOUT" />
