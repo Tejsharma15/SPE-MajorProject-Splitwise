@@ -13,6 +13,7 @@ public class PersonalBillDTO{
 
     public PersonalBill getBillFromDTO(UUID user_id){
         PersonalBill bill = new PersonalBill();
+        System.out.println("Okay see");
         bill.setBillName(billName);
         bill.setUserId(user_id);
         bill.setAmount(amount);

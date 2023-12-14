@@ -56,7 +56,7 @@ public class PersonalBillController {
         System.out.println(email);
         User user = userService.findUserByEmail(email);
         Optional<List<PersonalBill>> optionalBill = personalBillService.getBillByUserId(user.getUserId());
-        if(optionalBill.isPresent()){
+        if(optionalBill!=null){
             List<PersonalBill> bill = optionalBill.get();
             return ResponseEntity.ok(bill);
         }

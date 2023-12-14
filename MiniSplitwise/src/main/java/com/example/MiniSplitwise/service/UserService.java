@@ -4,6 +4,7 @@ import com.example.MiniSplitwise.dto.UserDTO;
 import com.example.MiniSplitwise.model.User;
 import com.example.MiniSplitwise.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

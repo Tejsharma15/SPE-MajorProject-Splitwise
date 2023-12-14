@@ -35,6 +35,7 @@ public class PersonalBillService {
     public Optional<List<PersonalBill>> getBillByUserId(UUID user_id){
         logger.info("Finding bills by user ID");
         Optional<List<PersonalBill>> bill = personalBillRepository.findByUserId(user_id);
+        // System.out.println(bill.getBillId());
         return bill;
     }
 
