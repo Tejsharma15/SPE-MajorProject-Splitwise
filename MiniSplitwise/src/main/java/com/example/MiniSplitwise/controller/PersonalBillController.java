@@ -29,14 +29,14 @@ public class PersonalBillController {
     }
 
     @PostMapping("/addBills")
-    public ResponseEntity<String> addBills (@RequestBody PersonalBillDTO personalBillDTO) {
+    public ResponseEntity<UUID> addBills (@RequestBody PersonalBillDTO personalBillDTO) {
         User user = userService.findUserByEmail(personalBillDTO.getEmail());
         logger.info("Adding personal bill");
         UUID result = personalBillService.addBills(personalBillDTO, user.getUserId());       
         if (result == null) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
-        return ResponseEntity.ok("Inserted Bills Successfully");
+        return ResponseEntity.ok(result);
     }
 
     @GetMapping("/getBillById/{id}")

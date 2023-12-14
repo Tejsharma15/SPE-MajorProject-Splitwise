@@ -7,7 +7,7 @@ function ExpenseList({ expenses, onEdit, onDelete }) {
   return (
     <Grid gap={4} mb={4} templateColumns='repeat(3, 1fr)'>
       {expenses.map((expense) => (
-        <Card key={expense.id} bg="papayawhip" >
+        <Card key={expense.billId} bg="papayawhip" >
         <CardHeader>
           <Heading as="h3" size="sm">
             {expense.billName}
@@ -119,10 +119,11 @@ function ExpenseTracker({user,jwt}) {
       if (!response.ok) {
         throw new Error('Network response was not ok.');
       }
-      return response;
+      return response.json();
     })
     .then((data) => {
-      // console.log(data); // Log the response data here
+      console.log(data); // Log the response data here
+      expenseData["billId"]=data;
       ret = 0;
     })
     .catch((err) => {
@@ -131,7 +132,7 @@ function ExpenseTracker({user,jwt}) {
     });
 
 
-    if(ret===0) setExpenses([...expenses, {"billName": expenseData.billName, "amount": expenseData.amount}]);
+    if(ret===0) setExpenses([...expenses, {"billName": expenseData.billName, "amount": expenseData.amount, "billId": expenseData.billId}]);
   };
 
   const handleEditExpense = (updatedExpense) => {
