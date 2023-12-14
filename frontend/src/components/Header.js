@@ -13,6 +13,7 @@ function Header({user}) {
   const handleLogout=()=>{
     dispatch(logout());
   }
+  console.log(user)
   return (
     <>
 
@@ -39,7 +40,8 @@ function Header({user}) {
       </DrawerContent>
     </Drawer>
     <Box display='flex' flexDirection='row' alignItems='center' h='100%'>
-    <Button ref={btnRef} m='2' p='1' color='teal.800' backgroundColor='white' onClick={onOpen}> <HamburgerIcon /></Button>
+      {user!==null && user!==undefined ? 
+    <Button ref={btnRef} m='2' p='1' color='teal.800' backgroundColor='white' onClick={onOpen}> <HamburgerIcon /></Button>:""}
     <Link to="/"><Image boxSize='50px' objectFit='cover' borderRadius='full' color='gray' src={logo}></Image></Link>
       <Heading as="h1" p='2' fontSize="4xl">MiniSplitwise</Heading>
       <Spacer/>

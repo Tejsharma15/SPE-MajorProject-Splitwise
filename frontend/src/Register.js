@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Input, InputGroup, Button, Heading } from '@chakra-ui/react';
+import { Box, Input, InputGroup, Button, Heading, Center } from '@chakra-ui/react';
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { login } from './store';
@@ -62,14 +62,14 @@ function Register() {
   };
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" flexGrow={1}>
-  <Box
+  <Center
     boxShadow="dark-lg"
     p="6"
     rounded="md"
     bg="teal.100"
     alignSelf="center"
     mt="4"
+    flexDirection="column"
   >
     <Heading as="h3">Register</Heading>
     <Box
@@ -132,8 +132,7 @@ function Register() {
         Register
       </Button>
     </Box>
-  </Box>
-</Box>
+</Center>
 
   );
 }
