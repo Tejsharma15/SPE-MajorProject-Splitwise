@@ -2,10 +2,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Bills from './Bills';
-import Login from './Login';
+import Login from './components/Login';
 import Register from './Register';
 import Header from './components/Header';
-import { ChakraProvider, Grid, GridItem } from "@chakra-ui/react";
+import { ChakraProvider, Grid, GridItem,Box } from "@chakra-ui/react";
 
 function App() {
   return (
@@ -21,13 +21,15 @@ function App() {
       <GridItem pl='2' bg='green.600'>
         <Header />
       </GridItem>
-      <GridItem pl='2' bg='papayawhip' color='teal.900'>
+      <GridItem bg='papayawhip' color='teal.900'>
+        <Box display='flex' flexDirection='column'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/bills" element={<Bills />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
+        </Box>
       </GridItem>
       </Grid>
       </Router>
