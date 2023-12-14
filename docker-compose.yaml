@@ -32,7 +32,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://myappdb:5432/minisplitwise?createDatabaseIfNotExist=true
     volumes:
-      - logs-for-elk:/logs
+      - logs-for-elk:/mylog.log
     networks: 
       - my-network
 
