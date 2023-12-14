@@ -33,7 +33,7 @@ public class BillController {
         insertedData.put(result, "Added to Bills");
         List<BillItem> bills = billDTO.getDebitors();
         for(int i=0; i<bills.size(); i++){
-            System.out.println(bills.get(i).getUserId());
+            System.out.println(bills.get(i).getEmail());
             System.out.println(bills.get(i).getAmount());
         }
         List<UUID> maps = billService.addMappings(billDTO, result);
@@ -64,5 +64,11 @@ public class BillController {
     public void updateStatusById(@PathVariable UUID id){
         logger.info("Updating bill by id");
         billService.updateStatusToTrue(id);
+    }
+
+    @DeleteMapping("/deleteBillsById/{id}")
+    public void deleteBillsById(@PathVariable UUID id){
+        logger.info("Deleting shared bills by bill id");
+        billService.deleteBillsById(id);
     }
 }

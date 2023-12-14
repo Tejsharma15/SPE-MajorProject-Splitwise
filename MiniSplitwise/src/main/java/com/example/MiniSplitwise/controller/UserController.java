@@ -60,12 +60,6 @@ public class UserController {
         }
     }
 
-    @PostMapping
-    public UUID insertUser(@RequestBody UserDTO userDTO){
-        logger.info("Running insert user");
-        return userService.insertUser(userDTO);
-    }
-
     @DeleteMapping("/{id}")
     public void deletePerson(@PathVariable("id") UUID id){
         logger.info("Running delete user by id");

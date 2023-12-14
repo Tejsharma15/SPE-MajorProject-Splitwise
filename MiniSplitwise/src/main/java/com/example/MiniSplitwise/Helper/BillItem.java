@@ -2,20 +2,20 @@ package com.example.MiniSplitwise.Helper;
 import java.util.UUID;
 
 public class BillItem {
-    private UUID userId;
+    private String email;
     private Float amount;
 
-    public BillItem(UUID userId, Float amount) {
-        this.userId = userId;
+    public BillItem(String email, Float amount) {
+        this.email = email;
         this.amount = amount;
     }
 
-    public UUID getUserId() {
-        return userId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserId(UUID userId) {
-        this.userId = userId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Float getAmount() {
