@@ -1,17 +1,39 @@
 import React, { useState } from 'react';
 import { Box, Input, InputGroup, InputRightElement, Button, FormErrorMessage, Heading, Spacer } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-
+import { useDispatch } from "react-redux";
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate=useNavigate();
+    const dispatch = useDispatch();
     const handleSubmit = (e) => {
       e.preventDefault();
-      navigate("/")
-      console.log('Login submitted:', { email, password });
+      loginAPICall(e.email,e.password);
+      // navigate("/")
+      console.log('Login submitted:', e);
     };
-  
+    const loginAPICall = async (userData) => {
+      console.log(JSON.stringify(userData))
+      const response = await fetch('http://localhost:8081/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+
+      console.log(response);
+      if (!response.ok) {
+        alert("Couldn't Log In. Try to Register first.")
+
+      }
+      else{
+        dispatch(email,response)
+        console.log('User logged in');
+      }
+
+    };
     return (
       <Box display='flex' flexDirection='column' alignItems='center' flexGrow='1'>
         <Box boxShadow='dark-lg' p='6' rounded='md' bg='teal.100' alignSelf='center' mt='4'>
