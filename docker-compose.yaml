@@ -33,14 +33,14 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://myappdb:5432/minisplitwise?createDatabaseIfNotExist=true
     volumes:
-      - ~/logs:~/logs
+      - logs-for-elk:/logs
     networks: 
       - my-network
 
   filebeat:
       image: elastic/filebeat:7.17.2
       volumes:
-        - ~/logs:/var/log/backend-container # Adjust this based on your actual log volume
+        - logs-for-el:/var/log/backend-container/ # Adjust this based on your actual log volume
       depends_on:
         - backend # Ensure Filebeat starts after your backend container
       environment:
@@ -51,7 +51,8 @@ services:
 volumes:
   postgres-data:
     driver: local
-
+  logs-for-elk:
+    driver: local
 networks:
   my-network:
     driver: bridge
