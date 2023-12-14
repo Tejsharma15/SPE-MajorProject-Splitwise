@@ -1,0 +1,39 @@
+[2023-12-14 09:41:02,800] [org.hibernate.validator.internal.util.Version] [background-preinit] [21] [INFO ] HV000001: Hibernate Validator 8.0.0.Final
+[2023-12-14 09:41:03,032] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting MiniSplitwiseApplication using Java 17.0.9 with PID 3720 (/home/tejsharma/personalProjs/SPE/SPE-MajorProject-Splitwise/MiniSplitwise/target/classes started by tejsharma in /home/tejsharma/personalProjs/SPE/SPE-MajorProject-Splitwise/MiniSplitwise)
+[2023-12-14 09:41:03,036] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2023-12-14 09:41:04,891] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-12-14 09:41:05,317] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 361 ms. Found 3 JPA repository interfaces.
+[2023-12-14 09:41:07,854] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [108] [INFO ] Tomcat initialized with port(s): 8081 (http)
+[2023-12-14 09:41:07,869] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8081"]
+[2023-12-14 09:41:07,875] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting service [Tomcat]
+[2023-12-14 09:41:07,877] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.15]
+[2023-12-14 09:41:08,092] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-12-14 09:41:08,096] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [main] [291] [INFO ] Root WebApplicationContext: initialization completed in 4926 ms
+[2023-12-14 09:41:08,442] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-12-14 09:41:08,586] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-12-14 09:41:09,260] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-12-14 09:41:10,616] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11e834ad
+[2023-12-14 09:41:10,619] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-12-14 09:41:10,814] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2023-12-14 09:41:12,803] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-12-14 09:41:12,824] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-14 09:41:13,587] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [main] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-12-14 09:41:13,672] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [main] [87] [WARN ] 
+
+Using generated security password: 6b1bd91b-b817-42f5-b646-c637df6b9797
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2023-12-14 09:41:14,483] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16602333, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67376bae, org.springframework.security.web.context.SecurityContextHolderFilter@33214124, org.springframework.security.web.header.HeaderWriterFilter@31f5ffb9, org.springframework.web.filter.CorsFilter@6d6d81c, org.springframework.security.web.authentication.logout.LogoutFilter@1b53e6fc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4987142d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a9ea03f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1231f25c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c59cf66, org.springframework.security.web.access.ExceptionTranslationFilter@3f838072, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1165a952]
+[2023-12-14 09:41:14,922] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting ProtocolHandler ["http-nio-8081"]
+[2023-12-14 09:41:14,993] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [220] [INFO ] Tomcat started on port(s): 8081 (http) with context path ''
+[2023-12-14 09:41:15,007] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started MiniSplitwiseApplication in 12.943 seconds (process running for 15.272)
+[2023-12-14 09:41:15,017] [com.example.MiniSplitwise.MiniSplitwiseApplication] [main] [15] [INFO ] Running Splitwise
+[2023-12-14 09:42:36,619] [org.apache.juli.logging.DirectJDKLog] [http-nio-8081-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-12-14 09:42:36,642] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8081-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2023-12-14 09:42:36,736] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8081-exec-1] [554] [INFO ] Completed initialization in 90 ms
+[2023-12-14 09:42:38,122] [com.example.MiniSplitwise.controller.UserController] [http-nio-8081-exec-1] [65] [INFO ] Running insert user
+[2023-12-14 09:44:58,346] [com.example.MiniSplitwise.controller.UserController] [http-nio-8081-exec-5] [71] [INFO ] Running delete user by id
+[2023-12-14 09:47:46,835] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-14 09:47:47,286] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-12-14 09:47:48,685] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
