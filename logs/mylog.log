@@ -2098,3 +2098,32 @@ java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.
 [2023-12-14 19:19:29,431] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
 [2023-12-14 19:19:29,434] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
 [2023-12-14 19:19:29,436] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-12-14 19:25:32,062] [org.hibernate.validator.internal.util.Version] [background-preinit] [21] [INFO ] HV000001: Hibernate Validator 8.0.0.Final
+[2023-12-14 19:25:32,082] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting MiniSplitwiseApplication using Java 17.0.8 with PID 31512 (/Users/chinthanchandra/Desktop/IIITB/4th_Year/sem7/spe/SPE-Major-Project/SPE-MajorProject-Splitwise/MiniSplitwise/target/classes started by chinthanchandra in /Users/chinthanchandra/Desktop/IIITB/4th_Year/sem7/spe/SPE-Major-Project/SPE-MajorProject-Splitwise/MiniSplitwise)
+[2023-12-14 19:25:32,083] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2023-12-14 19:25:32,352] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-12-14 19:25:32,377] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+[2023-12-14 19:25:32,616] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [108] [INFO ] Tomcat initialized with port(s): 8081 (http)
+[2023-12-14 19:25:32,620] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8081"]
+[2023-12-14 19:25:32,621] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting service [Tomcat]
+[2023-12-14 19:25:32,621] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.15]
+[2023-12-14 19:25:32,664] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-12-14 19:25:32,665] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [main] [291] [INFO ] Root WebApplicationContext: initialization completed in 564 ms
+[2023-12-14 19:25:32,721] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-12-14 19:25:32,751] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-12-14 19:25:32,868] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-12-14 19:25:32,938] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c82031b
+[2023-12-14 19:25:32,939] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-12-14 19:25:32,968] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2023-12-14 19:25:33,331] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-12-14 19:25:33,336] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-14 19:25:33,428] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [main] [47] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2023-12-14 19:25:33,596] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [main] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-12-14 19:25:33,769] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16ca4532, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cc82c83, org.springframework.security.web.context.SecurityContextHolderFilter@653a5a, org.springframework.security.web.header.HeaderWriterFilter@624268ab, org.springframework.web.filter.CorsFilter@75a5a912, org.springframework.security.web.authentication.logout.LogoutFilter@37289e90, com.example.MiniSplitwise.config.JwtAuthenticationFilter@a0e35c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d21b505, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22db974d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f3bc119, org.springframework.security.web.session.SessionManagementFilter@74fda9ed, org.springframework.security.web.access.ExceptionTranslationFilter@726ee6cf, org.springframework.security.web.access.intercept.AuthorizationFilter@36618b3b]
+[2023-12-14 19:25:33,855] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting ProtocolHandler ["http-nio-8081"]
+[2023-12-14 19:25:33,867] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [220] [INFO ] Tomcat started on port(s): 8081 (http) with context path ''
+[2023-12-14 19:25:33,874] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started MiniSplitwiseApplication in 1.919 seconds (process running for 2.121)
+[2023-12-14 19:25:33,876] [com.example.MiniSplitwise.MiniSplitwiseApplication] [main] [15] [INFO ] Running Splitwise
+[2023-12-14 19:25:45,792] [org.apache.juli.logging.DirectJDKLog] [http-nio-8081-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-12-14 19:25:45,793] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8081-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2023-12-14 19:25:45,795] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8081-exec-1] [554] [INFO ] Completed initialization in 2 ms
