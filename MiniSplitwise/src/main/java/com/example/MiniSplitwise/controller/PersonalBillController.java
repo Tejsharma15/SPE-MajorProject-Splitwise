@@ -63,10 +63,29 @@ public class PersonalBillController {
         else return ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/deleteByBillId/{id}")
-    public ResponseEntity<String> deleteByBillId(@PathVariable UUID id) {
-        personalBillService.deleteByBillId(id);
-        return ResponseEntity.ok("Bill deleted successfully!");
+    @PutMapping("updateUserById/{id}")
+    public ResponseEntity<String> updateUserById(@RequestBody PersonalBillDTO personalBillDTO, @PathVariable UUID id){
+        logger.info("Updating user by id");
+        System.out.println(id);
+        personalBillService.updateUserById(personalBillDTO, id);
+        return ResponseEntity.ok("Personal Bill Changed Successfully");
+    }
+
+    @GetMapping("/getTotalExpense/{email}")
+    public ResponseEntity<Float> getTotalExpense(@PathVariable String email) {
+        logger.info("Getting total expense for an id");
+        User user = userService.findUserByEmail(email);
+        Optional<List<PersonalBill>> optionalBill = personalBillService.getBillByUserId(user.getUserId());
+        System.out.println("Calculating sum...");
+        if(optionalBill!=null){
+            List<PersonalBill> bill = optionalBill.get();
+            Float sum = 0f;
+            for(int i=0; i<bill.size(); i++){
+                sum += bill.get(i).getAmount();
+            }
+            return ResponseEntity.ok(sum);
+        }
+        else return ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/deleteByUser/{email}")

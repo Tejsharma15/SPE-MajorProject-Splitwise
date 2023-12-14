@@ -47,13 +47,14 @@ public class PersonalBillService {
     public void deleteByUserId(UUID userId) {
         personalBillRepository.deleteByUserId(userId);
     }
-    // @Transactional
-    // public void updateStatusToTrue(UUID entityId) {
-    //     logger.info("Updating paid status");
-    //     Optional<PersonalBill> billEntity = personalBillRepository.findById(entityId);
-    //     billEntity.ifPresent(entity -> {
-    //         entity.setCompleted(true);
-    //         personalBillRepository.save(entity);
-    //     });
-    // }
+    @Transactional
+    public void updateUserById(PersonalBillDTO personalBillDTO, UUID billId) {
+        logger.info("Updating status of bill");
+        Optional<PersonalBill> billEntity = personalBillRepository.findById(billId);
+        billEntity.ifPresent(entity -> {
+            entity.setBillName(personalBillDTO.getBillName());
+            entity.setAmount(personalBillDTO.getAmount());
+            personalBillRepository.save(entity);
+        });
+    }
 }

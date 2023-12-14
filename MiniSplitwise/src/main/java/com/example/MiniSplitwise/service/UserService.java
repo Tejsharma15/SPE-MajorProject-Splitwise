@@ -55,10 +55,9 @@ public class UserService implements UserDetailsService{
         return new org.springframework.security.core.userdetails.User(user.getPersonalEmail(), user.getAccPassword(), user.getAuthorities());
     }
     public User findUserByEmail(String email) throws UsernameNotFoundException{
-        // FIND USER
         Optional<User> user = userRepository.findByPersonalEmail(email);
-//        SEND USER ID TO ROLE ROPE
         if(user.isPresent()){
+            System.out.println("User is present");
             User u = user.get();
             return u;
         }
