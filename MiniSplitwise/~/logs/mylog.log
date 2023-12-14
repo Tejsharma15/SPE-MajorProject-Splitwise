@@ -1197,3 +1197,6 @@ io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period
 [2023-12-15 02:04:27,727] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-5] [24] [INFO ] Generating Token
 [2023-12-15 02:04:27,729] [com.example.MiniSplitwise.controller.PersonalBillController] [http-nio-8081-exec-5] [55] [INFO ] Finding Bills by User
 [2023-12-15 02:04:27,730] [com.example.MiniSplitwise.service.PersonalBillService] [http-nio-8081-exec-5] [37] [INFO ] Finding bills by user ID
+[2023-12-15 02:05:24,486] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-15 02:05:24,492] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-12-15 02:05:24,495] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.

@@ -56,7 +56,7 @@ pipeline
         stage('Stage 4: Build and Push Frontend Docker Image') {
             steps {
                 script {
-                    frontendImage = docker.build(env.FRONTEND_IMAGE_NAME, '--platform=linux/amd64 ./frontend')
+                    frontendImage = docker.build(env.FRONTEND_IMAGE_NAME, './frontend')
                     docker.withRegistry('', registryCredential) {
                         frontendImage.push('latest')
                     }
@@ -66,7 +66,7 @@ pipeline
         stage('Stage 5: Build and Push Backend Docker Image') {
             steps {
                 script {
-                    backendImage = docker.build(env.BACKEND_IMAGE_NAME, '--platform=linux/amd64 ./MiniSplitwise')
+                    backendImage = docker.build(env.BACKEND_IMAGE_NAME, './MiniSplitwise')
                     docker.withRegistry('', registryCredential) {
                         backendImage.push('latest')
                     }
