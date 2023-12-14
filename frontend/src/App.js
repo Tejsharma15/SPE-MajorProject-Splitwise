@@ -1,6 +1,6 @@
 // App.js
 import React, { useEffect } from 'react';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import ExpenseTracker from './components/ExpenseTracker';
 import Login from './components/Login';
 import Register from './Register';
@@ -10,7 +10,6 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const user=useSelector((state)=> state.user);
-  const navigate=useNavigate();
   return (
     
       <Grid
@@ -43,7 +42,7 @@ function Home({user}) {
     if(user===null){
       navigate("/login");
     }
-  },[user]);
+  },[user,navigate]);
   return (
     <div>
       <h2>Welcome to Splitwise App</h2>

@@ -52,12 +52,12 @@ function ExpenseTracker({user}) {
     if(user===null || user===undefined){
       navigate("/login");
     }
-    const fetchExpenses=()=>{
-      let expense;
-      setExpenses(expense);
-    }
+    // const fetchExpenses=()=>{
+    //   let expense;
+    //   setExpenses(expense);
+    // }
     // fetchExpenses();
-  },[user]);
+  },[user,navigate]);
   const handleAddExpense = (newExpense) => {
     // Update state with new expense
     setExpenses([...expenses, newExpense]);

@@ -27,7 +27,7 @@ function Register() {
   const sendUserData = async (userData) => {
     console.log(JSON.stringify(userData))
     let jwt,ret;
-    const response = await fetch('http://localhost:8081/auth/register', {
+    await fetch('http://localhost:8081/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
