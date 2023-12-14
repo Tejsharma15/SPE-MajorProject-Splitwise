@@ -5,29 +5,33 @@ import Bills from './Bills';
 import Login from './Login';
 import Register from './Register';
 import Header from './components/Header';
+import { ChakraProvider, Grid, GridItem } from "@chakra-ui/react";
 
 function App() {
   return (
-    <Router>
-      <div>
+    <ChakraProvider>
+      <Router>
+      <Grid
+        templateRows='10% 90%'
+        color='teal.100'
+        fontWeight='bold'
+        h='100vh'
+        w='100vw'
+      >
+      <GridItem pl='2' bg='green.600'>
         <Header />
-        <nav>
-        <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/bills">Bills</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Register</Link></li>
-          </ul>
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/bills" element={<Bills />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </div>
-    </Router>
+      </GridItem>
+      <GridItem pl='2' bg='papayawhip' color='teal.900'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/bills" element={<Bills />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+      </GridItem>
+      </Grid>
+      </Router>
+    </ChakraProvider>
   );
 }
 
