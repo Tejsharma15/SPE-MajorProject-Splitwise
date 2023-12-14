@@ -21,7 +21,7 @@ function Login() {
     const loginAPICall = async (userData) => {
       console.log(userData)
       let jwt,ret;
-      const response = await fetch('http://localhost:8081/auth/authenticate', {
+      await fetch('http://localhost:8081/auth/authenticate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
