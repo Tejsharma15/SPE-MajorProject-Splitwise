@@ -33,7 +33,7 @@ public class Bill {
     private Float amount;
 
     @Column(name="completed")
-    private Boolean Completed = false;
+    private Boolean completed = false;
 
     public UUID getCreditorId() {
         return creditorId;
@@ -43,7 +43,7 @@ public class Bill {
         this.creditorId = creditorId;
     }
     public UUID getBillId() {
-        return billId;
+        return this.billId;
     }
 
     public void setBillId(UUID billId) {
@@ -51,7 +51,7 @@ public class Bill {
     }
 
     public String getBillName() {
-        return billName;
+        return this.billName;
     }
 
     public void setBillName(String billName) {
@@ -59,7 +59,7 @@ public class Bill {
     }
 
     public Float getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public void setAmount(Float amount) {
@@ -67,10 +67,10 @@ public class Bill {
     }
 
     public Boolean getCompleted() {
-        return Completed;
+        return this.completed;
     }
 
     public void setCompleted(Boolean completed) {
-        Completed = completed;
+        this.completed = completed;
     }
 }
