@@ -35,7 +35,7 @@ pipeline
         {
             steps
             {
-                git branch: 'main',
+                git branch: 'master',
                 url:'https://github.com/Tejsharma15/SPE-MajorProject-Splitwise'
             }
         }
