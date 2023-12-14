@@ -26,7 +26,7 @@ pipeline
         stage('Stage 0.1: Start DB container'){
             steps{
                 script{
-                    sh 'docker run --name postgresql -d -p 5432:5432 -e POSTGRES_USER=myappdb -e POSTGRES_PASSWORD=abc123 -e POSTGRES_DB=minisplitwise -v ./postgres:/var/lib/postgresql/data postgres:latest'
+                    sh 'docker run --name postgresql -d -p 5432:5432 -e POSTGRES_USER=myappdb -e POSTGRES_PASSWORD=abc123 -e POSTGRES_DB=minisplitwise postgres:latest'
 
                 }
             }
