@@ -2127,3 +2127,15 @@ java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.
 [2023-12-14 19:25:45,792] [org.apache.juli.logging.DirectJDKLog] [http-nio-8081-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
 [2023-12-14 19:25:45,793] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8081-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
 [2023-12-14 19:25:45,795] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8081-exec-1] [554] [INFO ] Completed initialization in 2 ms
+[2023-12-14 21:09:40,907] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m6s889ms).
+[2023-12-14 21:11:46,932] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m6s42ms).
+[2023-12-14 21:14:28,238] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m11s292ms).
+[2023-12-14 21:16:46,103] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m17s864ms).
+[2023-12-14 21:19:19,806] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m3s691ms).
+[2023-12-14 21:22:02,219] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m12s298ms).
+[2023-12-14 21:24:36,249] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m4s20ms).
+[2023-12-14 21:26:36,759] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s496ms).
+[2023-12-14 21:29:14,151] [com.zaxxer.hikari.pool.HikariPool$HouseKeeper] [HikariPool-1 housekeeper] [804] [WARN ] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s383ms).
+[2023-12-14 22:22:19,992] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-14 22:22:20,011] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-12-14 22:22:20,014] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.

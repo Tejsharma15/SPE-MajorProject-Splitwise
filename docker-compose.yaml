@@ -32,11 +32,22 @@ services:
     container_name: backend
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://myappdb:5432/minisplitwise?createDatabaseIfNotExist=true
-    # volumes:
-    #   - /logs:/logs
+    volumes:
+      - ~/logs:~/logs
     networks: 
       - my-network
 
+  filebeat:
+      image: elastic/filebeat:7.17.2
+      volumes:
+        - ~/logs:/var/log/backend-container # Adjust this based on your actual log volume
+      depends_on:
+        - backend # Ensure Filebeat starts after your backend container
+      environment:
+        FILEBEAT_INPUTS: /var/log/backend-container/*.log # Specify your log file paths
+        FILEBEAT_OUTPUT_ELASTICSEARCH_HOSTS: "https://spe-majorproject.es.asia-south1.gcp.elastic-cloud.com" # Replace with your Elasticsearch host(s) and port
+        FILEBEAT_OUTPUT_ELASTICSEARCH_USERNAME: "elastic" # Set username for Elasticsearch access
+        FILEBEAT_OUTPUT_ELASTICSEARCH_PASSWORD: "SPEmajorproject123" # Secure your password!
 volumes:
   postgres-data:
     driver: local
