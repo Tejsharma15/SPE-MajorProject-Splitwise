@@ -23,6 +23,7 @@ public class PersonalBillService {
 
     public UUID addBills(PersonalBillDTO personalBillDTO, UUID user_id) {
         logger.info("Adding personal bills");
+        System.out.println(personalBillDTO.getBillName()+" "+personalBillDTO.getAmount());
         PersonalBill bill = personalBillDTO.getBillFromDTO(user_id);
         return personalBillRepository.save(bill).getBillId();
     }

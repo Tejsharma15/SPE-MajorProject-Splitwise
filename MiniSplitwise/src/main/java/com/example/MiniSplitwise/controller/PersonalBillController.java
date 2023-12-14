@@ -64,8 +64,9 @@ public class PersonalBillController {
     }
 
     @DeleteMapping("/deleteByBillId/{id}")
-    public void deleteByBillId(@PathVariable UUID id){
+    public ResponseEntity<String> deleteByBillId(@PathVariable UUID id) {
         personalBillService.deleteByBillId(id);
+        return ResponseEntity.ok("Bill deleted successfully!");
     }
 
     @DeleteMapping("/deleteByUser/{email}")
