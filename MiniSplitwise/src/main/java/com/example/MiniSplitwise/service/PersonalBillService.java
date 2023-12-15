@@ -48,7 +48,7 @@ public class PersonalBillService {
         personalBillRepository.deleteByUserId(userId);
     }
     @Transactional
-    public void updateUserById(PersonalBillDTO personalBillDTO, UUID billId) {
+    public void updateBillById(PersonalBillDTO personalBillDTO, UUID billId) {
         logger.info("Updating status of bill");
         Optional<PersonalBill> billEntity = personalBillRepository.findById(billId);
         billEntity.ifPresent(entity -> {

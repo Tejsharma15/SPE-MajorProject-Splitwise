@@ -63,11 +63,11 @@ public class PersonalBillController {
         else return ResponseEntity.notFound().build();
     }
 
-    @PutMapping("updateUserById/{id}")
-    public ResponseEntity<String> updateUserById(@RequestBody PersonalBillDTO personalBillDTO, @PathVariable UUID id){
+    @PutMapping("updateBillById/{id}")
+    public ResponseEntity<String> updateBillById(@RequestBody PersonalBillDTO personalBillDTO, @PathVariable UUID id){
         logger.info("Updating user by id");
         System.out.println(id);
-        personalBillService.updateUserById(personalBillDTO, id);
+        personalBillService.updateBillById(personalBillDTO, id);
         return ResponseEntity.ok("Personal Bill Changed Successfully");
     }
 
