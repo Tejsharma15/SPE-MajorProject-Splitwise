@@ -65,7 +65,7 @@ public class PersonalBillController {
 
     @PutMapping("updateBillById/{id}")
     public ResponseEntity<String> updateBillById(@RequestBody PersonalBillDTO personalBillDTO, @PathVariable UUID id){
-        logger.info("Updating user by id");
+        logger.info("Updating bill by id");
         System.out.println(id);
         personalBillService.updateBillById(personalBillDTO, id);
         return ResponseEntity.ok("Personal Bill Changed Successfully");
