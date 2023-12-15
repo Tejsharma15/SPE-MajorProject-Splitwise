@@ -1707,3 +1707,6 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 [2023-12-15 15:28:16,641] [com.example.MiniSplitwise.controller.PersonalBillController] [http-nio-8081-exec-10] [76] [INFO ] Getting total expense for an id
 [2023-12-15 15:28:16,643] [com.example.MiniSplitwise.service.PersonalBillService] [http-nio-8081-exec-10] [37] [INFO ] Finding bills by user ID
 [2023-12-15 15:28:16,643] [com.example.MiniSplitwise.service.PersonalBillService] [http-nio-8081-exec-1] [37] [INFO ] Finding bills by user ID
+[2023-12-15 16:38:49,313] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-15 16:38:49,344] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-12-15 16:38:49,348] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.

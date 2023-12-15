@@ -1,6 +1,6 @@
 ---
 - name: Pull and run docker image
-  hosts: tejas
+  hosts: host_machine
   # become: yes
   tasks:
     - name: Check if Docker is installed
