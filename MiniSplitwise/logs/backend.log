@@ -1629,3 +1629,81 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
 	... 109 common frames omitted
+[2023-12-15 15:25:35,537] [org.hibernate.validator.internal.util.Version] [background-preinit] [21] [INFO ] HV000001: Hibernate Validator 8.0.0.Final
+[2023-12-15 15:25:35,564] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting MiniSplitwiseApplicationTests using Java 17.0.8 with PID 11289 (started by chinthanchandra in /Users/chinthanchandra/Desktop/IIITB/4th_Year/sem7/spe/SPE-Major-Project/SPE-MajorProject-Splitwise/MiniSplitwise)
+[2023-12-15 15:25:35,565] [org.springframework.boot.StartupInfoLogger] [main] [52] [DEBUG] Running with Spring Boot v3.1.5, Spring v6.0.13
+[2023-12-15 15:25:35,566] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2023-12-15 15:25:35,894] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-12-15 15:25:35,921] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+[2023-12-15 15:25:36,171] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-12-15 15:25:36,220] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-12-15 15:25:36,359] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-12-15 15:25:36,476] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70f4f89e
+[2023-12-15 15:25:36,477] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-12-15 15:25:36,511] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2023-12-15 15:25:36,930] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-12-15 15:25:36,934] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-15 15:25:37,050] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [main] [47] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2023-12-15 15:25:37,280] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [main] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-12-15 15:25:37,478] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@318f47f1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@900ffc4, org.springframework.security.web.context.SecurityContextHolderFilter@7040d71, org.springframework.security.web.header.HeaderWriterFilter@2c34ce24, org.springframework.web.filter.CorsFilter@39d44217, org.springframework.security.web.authentication.logout.LogoutFilter@2438a038, com.example.MiniSplitwise.config.JwtAuthenticationFilter@4c51fc9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a8081f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@137a9d69, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3280a79a, org.springframework.security.web.session.SessionManagementFilter@5a6f1342, org.springframework.security.web.access.ExceptionTranslationFilter@56c7e2d1, org.springframework.security.web.access.intercept.AuthorizationFilter@63bb719d]
+[2023-12-15 15:25:37,641] [org.springframework.mock.web.MockServletContext] [main] [435] [INFO ] Initializing Spring TestDispatcherServlet ''
+[2023-12-15 15:25:37,642] [org.springframework.web.servlet.FrameworkServlet] [main] [532] [INFO ] Initializing Servlet ''
+[2023-12-15 15:25:37,643] [org.springframework.web.servlet.FrameworkServlet] [main] [554] [INFO ] Completed initialization in 0 ms
+[2023-12-15 15:25:37,653] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started MiniSplitwiseApplicationTests in 2.221 seconds (process running for 2.745)
+[2023-12-15 15:25:38,285] [com.example.MiniSplitwise.controller.PersonalBillController] [main] [44] [INFO ] Finding bill by Id
+[2023-12-15 15:25:38,309] [com.example.MiniSplitwise.controller.UserController] [main] [30] [INFO ] Return all users
+[2023-12-15 15:25:38,318] [com.example.MiniSplitwise.controller.PersonalBillController] [main] [55] [INFO ] Finding Bills by User
+[2023-12-15 15:25:38,344] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-15 15:25:38,346] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-12-15 15:25:38,350] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-12-15 15:25:43,646] [org.hibernate.validator.internal.util.Version] [background-preinit] [21] [INFO ] HV000001: Hibernate Validator 8.0.0.Final
+[2023-12-15 15:25:43,660] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting MiniSplitwiseApplication using Java 17.0.8 with PID 11336 (/Users/chinthanchandra/Desktop/IIITB/4th_Year/sem7/spe/SPE-Major-Project/SPE-MajorProject-Splitwise/MiniSplitwise/target/classes started by chinthanchandra in /Users/chinthanchandra/Desktop/IIITB/4th_Year/sem7/spe/SPE-Major-Project/SPE-MajorProject-Splitwise/MiniSplitwise)
+[2023-12-15 15:25:43,660] [org.springframework.boot.StartupInfoLogger] [main] [52] [DEBUG] Running with Spring Boot v3.1.5, Spring v6.0.13
+[2023-12-15 15:25:43,661] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] No active profile set, falling back to 1 default profile: "default"
+[2023-12-15 15:25:43,910] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-12-15 15:25:43,939] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 26 ms. Found 4 JPA repository interfaces.
+[2023-12-15 15:25:44,148] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [108] [INFO ] Tomcat initialized with port(s): 8081 (http)
+[2023-12-15 15:25:44,153] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8081"]
+[2023-12-15 15:25:44,154] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting service [Tomcat]
+[2023-12-15 15:25:44,154] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.15]
+[2023-12-15 15:25:44,194] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-12-15 15:25:44,195] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [main] [291] [INFO ] Root WebApplicationContext: initialization completed in 515 ms
+[2023-12-15 15:25:44,243] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-12-15 15:25:44,259] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-12-15 15:25:44,354] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-12-15 15:25:44,409] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8eb6f9a
+[2023-12-15 15:25:44,410] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-12-15 15:25:44,428] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2023-12-15 15:25:44,764] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-12-15 15:25:44,768] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-12-15 15:25:44,859] [org.springframework.data.jpa.repository.query.QueryEnhancerFactory] [main] [47] [INFO ] Hibernate is in classpath; If applicable, HQL parser will be used.
+[2023-12-15 15:25:45,002] [org.springframework.web.filter.GenericFilterBean] [main] [240] [DEBUG] Filter 'jwtAuthenticationFilter' configured for use
+[2023-12-15 15:25:45,029] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [main] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-12-15 15:25:45,216] [org.springframework.security.web.DefaultSecurityFilterChain] [main] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7896e96a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e451f9a, org.springframework.security.web.context.SecurityContextHolderFilter@2a22e7e2, org.springframework.security.web.header.HeaderWriterFilter@3d84f113, org.springframework.web.filter.CorsFilter@7828bc6b, org.springframework.security.web.authentication.logout.LogoutFilter@712dd0b0, com.example.MiniSplitwise.config.JwtAuthenticationFilter@80b70fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5799b8a2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c4c32ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f59cb6f, org.springframework.security.web.session.SessionManagementFilter@779cda39, org.springframework.security.web.access.ExceptionTranslationFilter@30b0d5a7, org.springframework.security.web.access.intercept.AuthorizationFilter@186fc6e]
+[2023-12-15 15:25:45,280] [org.apache.juli.logging.DirectJDKLog] [main] [173] [INFO ] Starting ProtocolHandler ["http-nio-8081"]
+[2023-12-15 15:25:45,288] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [220] [INFO ] Tomcat started on port(s): 8081 (http) with context path ''
+[2023-12-15 15:25:45,293] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started MiniSplitwiseApplication in 1.759 seconds (process running for 1.962)
+[2023-12-15 15:25:45,294] [com.example.MiniSplitwise.MiniSplitwiseApplication] [main] [15] [INFO ] Running Splitwise
+[2023-12-15 15:25:55,199] [org.apache.juli.logging.DirectJDKLog] [http-nio-8081-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-12-15 15:25:55,199] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8081-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2023-12-15 15:25:55,203] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8081-exec-1] [554] [INFO ] Completed initialization in 4 ms
+[2023-12-15 15:28:16,529] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-7] [24] [INFO ] Generating Token
+[2023-12-15 15:28:16,529] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-6] [24] [INFO ] Generating Token
+[2023-12-15 15:28:16,588] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-6] [24] [INFO ] Generating Token
+[2023-12-15 15:28:16,588] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-7] [24] [INFO ] Generating Token
+[2023-12-15 15:28:16,590] [com.example.MiniSplitwise.config.JwtAuthenticationFilter] [http-nio-8081-exec-6] [44] [INFO ] JWT - Token is valid. Creating auth token
+[2023-12-15 15:28:16,590] [com.example.MiniSplitwise.config.JwtAuthenticationFilter] [http-nio-8081-exec-7] [44] [INFO ] JWT - Token is valid. Creating auth token
+[2023-12-15 15:28:16,599] [com.example.MiniSplitwise.controller.PersonalBillController] [http-nio-8081-exec-7] [55] [INFO ] Finding Bills by User
+[2023-12-15 15:28:16,599] [com.example.MiniSplitwise.controller.PersonalBillController] [http-nio-8081-exec-6] [55] [INFO ] Finding Bills by User
+[2023-12-15 15:28:16,601] [com.example.MiniSplitwise.service.PersonalBillService] [http-nio-8081-exec-6] [37] [INFO ] Finding bills by user ID
+[2023-12-15 15:28:16,601] [com.example.MiniSplitwise.service.PersonalBillService] [http-nio-8081-exec-7] [37] [INFO ] Finding bills by user ID
+[2023-12-15 15:28:16,626] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-10] [24] [INFO ] Generating Token
+[2023-12-15 15:28:16,627] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-1] [24] [INFO ] Generating Token
+[2023-12-15 15:28:16,633] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-1] [24] [INFO ] Generating Token
+[2023-12-15 15:28:16,633] [com.example.MiniSplitwise.config.JwtService] [http-nio-8081-exec-10] [24] [INFO ] Generating Token
+[2023-12-15 15:28:16,639] [com.example.MiniSplitwise.config.JwtAuthenticationFilter] [http-nio-8081-exec-1] [44] [INFO ] JWT - Token is valid. Creating auth token
+[2023-12-15 15:28:16,639] [com.example.MiniSplitwise.config.JwtAuthenticationFilter] [http-nio-8081-exec-10] [44] [INFO ] JWT - Token is valid. Creating auth token
+[2023-12-15 15:28:16,641] [com.example.MiniSplitwise.controller.PersonalBillController] [http-nio-8081-exec-1] [76] [INFO ] Getting total expense for an id
+[2023-12-15 15:28:16,641] [com.example.MiniSplitwise.controller.PersonalBillController] [http-nio-8081-exec-10] [76] [INFO ] Getting total expense for an id
+[2023-12-15 15:28:16,643] [com.example.MiniSplitwise.service.PersonalBillService] [http-nio-8081-exec-10] [37] [INFO ] Finding bills by user ID
+[2023-12-15 15:28:16,643] [com.example.MiniSplitwise.service.PersonalBillService] [http-nio-8081-exec-1] [37] [INFO ] Finding bills by user ID
