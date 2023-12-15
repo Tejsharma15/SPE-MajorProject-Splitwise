@@ -94,6 +94,12 @@ public class PersonalBillController {
         User user = userService.findUserByEmail(email);
         personalBillService.deleteByUserId(user.getUserId());
     }
+
+    @DeleteMapping("/deleteByBillId/{id}")
+    public ResponseEntity<String> deleteByBillId(@PathVariable UUID id) {
+        personalBillService.deleteByBillId(id);
+        return ResponseEntity.ok("Bill deleted successfully!");
+    }
     // @PutMapping("/updateStatus/{id}")
     // public void updateStatusById(@PathVariable UUID id){
     //     logger.info("Updating bill by id");

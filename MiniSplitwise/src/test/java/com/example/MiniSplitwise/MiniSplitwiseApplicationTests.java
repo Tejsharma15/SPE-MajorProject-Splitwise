@@ -81,19 +81,6 @@ public class MiniSplitwiseApplicationTests {
 
     @Test
     void testGetAllUsers() {
-        // Mock data
-
-        // Employee employee1 = new Employee();
-        // employee1.setId(1L);
-        // employee1.setFirstName("John");
-        // employee1.setLastName("Doe");
-        // employee1.setEmailId("john.doe@example.com");
-
-        // Employee employee2 = new Employee();
-        // employee2.setId(2L);
-        // employee2.setFirstName("Jane");
-        // employee2.setLastName("Doe");
-        // employee2.setEmailId("jane.doe@example.com");
 
         User user1 = new User();
         user1.setUserId(UUID.fromString("b9c7eb21-9ea5-4e89-b601-8b24b1eef3a1"));
@@ -111,21 +98,14 @@ public class MiniSplitwiseApplicationTests {
 
         List<User> mockUserList = Arrays.asList(user1, user2);
 
-        // Mock the behavior of the employeeRepository
         when(userService.getAllUsers()).thenReturn(mockUserList);
 
         ResponseEntity<List<User>> responseEntity = userController.getUsers();
-
-        // Handle the case where the body is null
         List<User> result = Optional.ofNullable(responseEntity.getBody()).orElse(Collections.emptyList());
-        // User test = userController.getUserById(UUID.fromString("1"));
-        // Verify the result
+
         assertEquals(mockUserList.size(), result.size());
         assertEquals(mockUserList.get(0).getName(), result.get(0).getName());
         assertEquals(mockUserList.get(1).getPersonalEmail(), result.get(1).getPersonalEmail());
-        // Add more assertions as needed
-        // assertEquals(user1.getPersonalEmail(), test.getPersonalEmail());
-
 	}
 
     @Test
@@ -166,10 +146,6 @@ public class MiniSplitwiseApplicationTests {
 
         List<PersonalBill> results = response.getBody();
 
-
-        // Handle the case where the body is null
-        // List<PersonalBill> results = Optional.ofNullable(response.getBody()).orElse(Collections.emptyList());
-        // Verify the result
         assertEquals(mockPersonalBillList.size(), results.size());
         System.out.println(mockPersonalBillList.get(1).getBillName());
         System.out.println(results.get(1).getBillName());
@@ -204,22 +180,14 @@ public class MiniSplitwiseApplicationTests {
         bill2.setBillName("bill2");
         bill2.setUserId(UUID.fromString("b9c7eb21-9ea5-4e89-b601-8b24b1eef3a1"));
         bill2.setAmount(1000.0f);
-        // List<PersonalBill> mockPersonalBillList = Arrays.asList(bill1, bill2);
 
         when(personalBillService.getBillById(UUID.fromString("b9c7eb21-9ea5-4e89-b601-8b24b1eef3a2")))
             .thenReturn(Optional.of(bill1));
-        // when(userService.findUserByEmail("email1@gmail.com")).thenReturn(user1);
 
         ResponseEntity<PersonalBill> response = personalBillController
                 .getBillById(UUID.fromString("b9c7eb21-9ea5-4e89-b601-8b24b1eef3a2"));
 
         PersonalBill result = response.getBody();
-
-
-        // Handle the case where the body is null
-        // List<PersonalBill> results = Optional.ofNullable(response.getBody()).orElse(Collections.emptyList());
-        // Verify the result
-        // assertEquals(mockPersonalBillList.size(), results.size());
         assertEquals(bill1.getBillId(), result.getBillId());
     }
 
